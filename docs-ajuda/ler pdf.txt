@@ -1,0 +1,12 @@
+# instala o pacote direto no jupyter
+!pip install pymupdf
+
+# importa biblioteca
+import fitz
+
+# faz a leitura
+with fitz.open("arquivo.pdf") as pdf:
+    texto = ""
+    for pagina in pdf:
+        texto += pagina.getText()
+texto

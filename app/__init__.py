@@ -16,5 +16,5 @@ csrf.init_app(app)
 babel = Babel(app)
 
 from core.dataproviders import tratamento_dpo, equipamento_dpo, paciente_dpo, refracao_dpo, tecnica_dpo, tipo_de_refracao_dpo
-from app.routes import equipamento_routes
-from app.view import equipamento_view
+from app.routes import index_routes, equipamento_routes, configuracoes_routes, paciente_routes, tipos_de_refracao_routes, tratamenstos_routes
+# , , refracoes_routes, tecnicas_routes, tipo_de_refracoes

@@ -1,0 +1,18 @@
+{% extends "./base.html" %} 
+{% block title %}Cadastro de Tipo de Refração{% endblock title%} 
+{% block content %}
+<div class="form-cadastro-tipo-de-refracao">
+    <form action="{{ url_for('gravar_tipo_de_refracao') }}" method="post" class="form">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <div class="form-group">
+            <label for="descricao" class="label">Descrição</label>
+            <input type="text" name="descricao" id="descricao" class="input" required>
+        </div>
+        <div class="form-group buttons">
+            <input type="submit" value="Cadastrar" class="button">
+            <input type="reset" value="Limpar" class="button">
+        </div>
+
+    </form>
+</div>
+{% endblock content %}

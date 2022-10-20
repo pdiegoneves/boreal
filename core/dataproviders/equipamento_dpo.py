@@ -4,10 +4,6 @@ from sqlalchemy.ext.declarative import declarative_base
 
 @dataclass
 class EquipamentoDpo(db.Model):
-    id: int
-    descricao: str
-    marca: str
-    numero_de_serie: str
     __tablename__ = "equipamentos"
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)

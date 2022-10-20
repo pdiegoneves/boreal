@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>{% block title %}{% endblock title %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='assets/css/style.min.css') }}"
+    />
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='assets/img/favicon.ico') }}">
+  </head>
+
+  <body>
+    <header id="cabecalho">
+      <img class="logo" src="{{ url_for('static', filename='assets/img/logo.webp') }}" alt="">
+      <nav>
+        <ul>
+          <li class="menu_principal_link li-link">
+            <a href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="menu_principal_link li-link">
+            <a href="{{ url_for('tratamentos') }}">Tratamentos</a>
+          </li>
+          <li class="menu_principal_link li-link">
+            <a href="{{ url_for('pacientes') }}">Pacientes</a>
+          </li>
+          <li class="menu_principal_link li-link">
+            <a href="{{ url_for('configuracoes') }}">Configurações</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="maincontainer">
+      {% block content %}{% endblock content %}
+    </main>
+    <script src={{ url_for('static', filename='assets/js/script.js') }}></script>
+  </body>
+</html>

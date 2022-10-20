@@ -1,6 +1,9 @@
 from app import db
+from dataclasses import dataclass
+from datetime import datetime
 from sqlalchemy.ext.declarative import declarative_base
 
+@dataclass
 class RefracaoDpo(db.Model):
     __tablename__ = "refracoes"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)

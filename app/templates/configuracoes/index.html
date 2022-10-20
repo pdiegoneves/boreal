@@ -1,0 +1,48 @@
+{% extends "./base.html" %} 
+{% block title %}Configurações{% endblock title%} 
+{% block content %}
+<div class="container configuracoes">
+    <section class="equipamentos">
+        <a class="button" href="{{ url_for('cadastro_de_equipamento') }}">Novo Equipamento</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>DESCRIÇÃO</th>
+                    <th>MARCA</th>
+                    <th>NÚMERO DE SÉRIE</th>
+                </tr>
+            </thead>
+            <tbody>    
+                {% for equipamento in equipamentos %}
+                <tr>
+                    <th>{{ equipamento.id }}</th>
+                    <td>{{ equipamento.descricao }}</td>
+                    <td>{{ equipamento.marca }}</td>
+                    <td>{{ equipamento.numero_de_serie }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    <section class="tipos-de-refracao">
+        <a class="button" href="{{ url_for('cadastro_de_tipo_de_refracao') }}">Novo Tipo de Refração</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>DESCRIÇÃO</th>
+                </tr>
+            </thead>
+            <tbody>    
+                {% for tipo_de_refracao in tipos_de_refracao %}
+                <tr>
+                    <th>{{ tipo_de_refracao.id }}</th>
+                    <td>{{ tipo_de_refracao.descricao }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</div>
+{% endblock content %}

@@ -4,7 +4,6 @@ from app import db
 
 class Equipamento():
     def __init__(self, descricao, marca, numero_de_serie):
-        self.__id = 0
         self.__descricao = descricao
         self.__marca = marca
         self.__numero_de_serie = numero_de_serie

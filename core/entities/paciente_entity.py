@@ -3,8 +3,7 @@ from app import db
 
 
 class Paciente():
-    def __init__(self, id, nome, data_de_nascimento, identificador, sexo):
-        self.__id = id
+    def __init__(self, nome, data_de_nascimento, identificador, sexo):
         self.__nome = nome
         self.__data_de_nascimento = data_de_nascimento
         self.__identificador = identificador
